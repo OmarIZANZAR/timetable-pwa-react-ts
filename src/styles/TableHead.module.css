@@ -1,0 +1,32 @@
+
+.container {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 10px;
+}
+
+.timer {
+    padding-left: 100px;
+    flex: 1;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+}
+
+.timer div {
+    padding: 5px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,.1);
+}
+
+.timer div p {
+    padding: 0;
+    width: fit-content;
+}

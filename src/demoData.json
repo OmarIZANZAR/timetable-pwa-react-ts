@@ -1,0 +1,373 @@
+{
+    "weeks_starting_count": "10/04/2021",
+    "elements": [
+        {
+            "name": "Base de données répartis",
+            "prof": "benhadou",
+            "starting_week": 2,
+            "final_week": 7,
+            "day": 1,
+            "time_start": 8,
+            "time_end": 10,
+            "class_type": 1
+        },
+        {
+            "name": "Générateur de système temps réel",
+            "prof": "medroumi",
+            "starting_week": 2,
+            "final_week": 4,
+            "day": 1,
+            "time_start": 10,
+            "time_end": 12,
+            "class_type": 1
+        },
+        {
+            "name": "Systèmes mobiles",
+            "prof": "medroumi",
+            "starting_week": 5,
+            "final_week": 5,
+            "day": 1,
+            "time_start": 10,
+            "time_end": 12,
+            "class_type": 1
+        },
+        {
+            "name": "TP Générateur de système temps réel",
+            "prof": "medroumi",
+            "starting_week": 6,
+            "final_week": 7,
+            "day": 1,
+            "time_start": 10,
+            "time_end": 12,
+            "class_type": 2
+        },
+        {
+            "name": "TP Générateur de système temps réel",
+            "prof": "medroumi",
+            "starting_week": 8,
+            "final_week": 8,
+            "day": 1,
+            "time_start": 8,
+            "time_end": 12,
+            "class_type": 2
+        },
+        {
+            "name": "TP Base de données répartis",
+            "prof": "benhadou",
+            "starting_week": 9,
+            "final_week": 10,
+            "day": 1,
+            "time_start": 8,
+            "time_end": 12,
+            "class_type": 2
+        },
+        {
+            "name": "Générateur d'architecture temps réel",
+            "prof": "medroumi",
+            "starting_week": 2,
+            "final_week": 4,
+            "day": 1,
+            "time_start": 14,
+            "time_end": 16,
+            "class_type": 1
+        },
+        {
+            "name": "Systèmes mobiles",
+            "prof": "medroumi",
+            "starting_week": 2,
+            "final_week": 4,
+            "day": 1,
+            "time_start": 16,
+            "time_end": 18,
+            "class_type": 1
+        },
+        {
+            "name": "TP Systèmes mobiles",
+            "prof": "medroumi",
+            "starting_week": 5,
+            "final_week": 6,
+            "day": 1,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 2
+        },
+        {
+            "name": "TP Générateur d'architecture temps réel",
+            "prof": "medroumi",
+            "starting_week": 7,
+            "final_week": 8,
+            "day": 1,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 2
+        },
+
+
+        {
+            "name": "Business English",
+            "prof": "benkirane",
+            "starting_week": 4,
+            "final_week": 13,
+            "day": 2,
+            "time_start": 8,
+            "time_end": 10,
+            "class_type": 1
+        },
+        {
+            "name": "Communication",
+            "prof": "benaziz",
+            "starting_week": 2,
+            "final_week": 12,
+            "day": 2,
+            "time_start": 10,
+            "time_end": 12,
+            "class_type": 1
+        },
+        {
+            "name": "Marketing",
+            "prof": "douari",
+            "starting_week": 13,
+            "final_week": 18,
+            "day": 2,
+            "time_start": 14,
+            "time_end": 16,
+            "class_type": 1
+        },
+        {
+            "name": "Finance",
+            "prof": "berrada",
+            "starting_week": 14,
+            "final_week": 16,
+            "day": 2,
+            "time_start": 16,
+            "time_end": 18,
+            "class_type": 1
+        },
+
+
+        {
+            "name": "Administration systèmes",
+            "prof": "assayad",
+            "starting_week": 2,
+            "final_week": 6,
+            "day": 3,
+            "time_start": 8,
+            "time_end": 10,
+            "class_type": 1
+        },
+        {
+            "name": "Architectures Clients / Serveurs",
+            "prof": "assayad",
+            "starting_week": 2,
+            "final_week": 6,
+            "day": 3,
+            "time_start": 10,
+            "time_end": 12,
+            "class_type": 1
+        },
+        {
+            "name": "TP Administration systèmes",
+            "prof": "assayad",
+            "starting_week": 7,
+            "final_week": 8,
+            "day": 3,
+            "time_start": 8,
+            "time_end": 12,
+            "class_type": 2
+        },
+        {
+            "name": "TP Architectures Clients / Serveurs",
+            "prof": "assayad",
+            "starting_week": 9,
+            "final_week": 11,
+            "day": 3,
+            "time_start": 8,
+            "time_end": 12,
+            "class_type": 2
+        },
+
+
+        {
+            "name": "Administration des bases de données",
+            "prof": "assayad",
+            "starting_week": 2,
+            "final_week": 10,
+            "day": 4,
+            "time_start": 8,
+            "time_end": 10,
+            "class_type": 1
+        },
+        {
+            "name": "Qualité logicielle et normalisation",
+            "prof": "chergui",
+            "starting_week": 5,
+            "final_week": 11,
+            "day": 4,
+            "time_start": 10,
+            "time_end": 12,
+            "class_type": 1
+        },
+        {
+            "name": "TP Administration des bases de données",
+            "prof": "assayad",
+            "starting_week": 12,
+            "final_week": 14,
+            "day": 4,
+            "time_start": 8,
+            "time_end": 12,
+            "class_type": 2
+        },
+        {
+            "name": "Sécurité des systèmes",
+            "prof": "boukhdir",
+            "starting_week": 1,
+            "final_week": 4,
+            "day": 4,
+            "time_start": 14,
+            "time_end": 16,
+            "class_type": 1
+        },
+        {
+            "name": "Réseaux à haut débit",
+            "prof": "boukhdir",
+            "starting_week": 1,
+            "final_week": 5,
+            "day": 4,
+            "time_start": 16,
+            "time_end": 18,
+            "class_type": 1
+        },
+        {
+            "name": "Couches hautes",
+            "prof": "boukhdir",
+            "starting_week": 5,
+            "final_week": 10,
+            "day": 4,
+            "time_start": 14,
+            "time_end": 16,
+            "class_type": 1
+        },
+        {
+            "name": "TP Sécurité des systèmes",
+            "prof": "boukhdir",
+            "starting_week": 6,
+            "final_week": 9,
+            "day": 4,
+            "time_start": 16,
+            "time_end": 18,
+            "class_type": 2
+        },
+        {
+            "name": "TP Réseaux à haut débit",
+            "prof": "boukhdir",
+            "starting_week": 11,
+            "final_week": 11,
+            "day": 4,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 2
+        },
+        {
+            "name": "TP Couches hautes",
+            "prof": "boukhdir",
+            "starting_week": 12,
+            "final_week": 12,
+            "day": 4,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 2
+        },
+        {
+            "name": "Management",
+            "prof": "hadini",
+            "starting_week": 14,
+            "final_week": 15,
+            "day": 4,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 1
+        },
+
+
+        {
+            "name": "Audit",
+            "prof": "benhadou",
+            "starting_week": 2,
+            "final_week": 9,
+            "day": 5,
+            "time_start": 8,
+            "time_end": 10,
+            "class_type": 1
+        },
+        {
+            "name": "Base de données multimédia",
+            "prof": "benhadou",
+            "starting_week": 2,
+            "final_week": 7,
+            "day": 5,
+            "time_start": 10,
+            "time_end": 12,
+            "class_type": 1
+        },
+        {
+            "name": "TP Base de données multimédia",
+            "prof": "benhadou",
+            "starting_week": 10,
+            "final_week": 12,
+            "day": 5,
+            "time_start": 8,
+            "time_end": 12,
+            "class_type": 2
+        },
+        {
+            "name": "Fiabilité des systèmes",
+            "prof": "chergui",
+            "starting_week": 3,
+            "final_week": 7,
+            "day": 5,
+            "time_start": 14,
+            "time_end": 16,
+            "class_type": 1
+        },
+        {
+            "name": "Les moteurs de base de données",
+            "prof": "moussaid",
+            "starting_week": 2,
+            "final_week": 8,
+            "day": 5,
+            "time_start": 16,
+            "time_end": 18,
+            "class_type": 1
+        },
+        {
+            "name": "TP Les moteurs de base de données",
+            "prof": "moussaid",
+            "starting_week": 9,
+            "final_week": 10,
+            "day": 5,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 2
+        },
+        {
+            "name": "TP Fiabilité des systèmes",
+            "prof": "chergui",
+            "starting_week": 11,
+            "final_week": 12,
+            "day": 5,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 2
+        },
+        {
+            "name": "Qualité logicielle et normalisation",
+            "prof": "chergui",
+            "starting_week": 13,
+            "final_week": 15,
+            "day": 5,
+            "time_start": 14,
+            "time_end": 18,
+            "class_type": 1
+        }
+    ]
+}

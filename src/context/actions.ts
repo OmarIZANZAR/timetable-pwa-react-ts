@@ -1,0 +1,11 @@
+export const INITIATE_STATE = "INITIATE_STATE"
+
+export const NEXT_WEEK = "NEXT_WEEK"
+export const PREV_WEEK = "PREV_WEEK"
+
+export const SET_CURRENT_WEEK = "SET_CURRENT_WEEK"
+export const SET_TODAY = "SET_TODAY"
+export const SET_DAYS_PLANS = "SET_DAYS_PLANS"
+export const SET_CURRENT_WEEK_ENDS = "SET_CURRENT_WEEK_ENDS"
+
+export const SET_RAW_DATA = "SET_RAW_DATA"

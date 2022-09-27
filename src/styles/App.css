@@ -1,0 +1,7 @@
+.App {
+    background-color: white;
+    max-width: 1500px;
+    min-width: 1000px;
+    height: 100vh;
+    margin: auto;
+}
