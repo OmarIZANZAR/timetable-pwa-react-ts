@@ -1,8 +1,8 @@
 import './styles/App.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Routes, Route, RoutesProps } from 'react-router-dom';
-import { Home, Setup } from './pages';
+import { Routes, Route } from 'react-router-dom';
+import { Home } from './pages';
 import { API } from './context'
 
 function App() {
@@ -16,8 +16,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Setup />} />
-        <Route path="/table" element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
   );
