@@ -45,8 +45,8 @@ export const setCurrentWeekEnds = (currentWeek: number) => (dispatch: any) : voi
   let firstMS = ( ( currentWeek - 1 ) * 7 * 24 * 3600 * 1000 ) + initMS
   let lastMS = firstMS + ( 4 * 24 * 3600 * 1000 )
 
-  let currentWeekStart = new Date(firstMS).toLocaleDateString(undefined, options )
-  let currentWeekEnd = new Date(lastMS).toLocaleDateString(undefined, options )
+  let currentWeekStart = new Date(firstMS).toLocaleDateString('fr-Fr', options )
+  let currentWeekEnd = new Date(lastMS).toLocaleDateString('fr-Fr', options )
 
   dispatch({ 
     type: Actions.SET_CURRENT_WEEK_ENDS,

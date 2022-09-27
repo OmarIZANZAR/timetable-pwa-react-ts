@@ -18,7 +18,7 @@ const Header = () => {
                 <div>
                     <h2>S{ state.currentWeek }</h2>
                 </div>
-                <p>de { state.currentWeekStart } à {state.currentWeekEnd}</p>
+                <p>du { state.currentWeekStart } au {state.currentWeekEnd}</p>
             </div>
 
             <div className={styles.controls}>
