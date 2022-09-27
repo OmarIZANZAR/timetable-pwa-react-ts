@@ -9,7 +9,7 @@ function reducer ( state: StateInterface = initialState, action: ActionInterface
         case Actions.NEXT_WEEK:
             return {
                 ...state,
-                currentWeek: state.currentWeek + 1,
+                currentWeek: state.currentWeek + 1 > state.lastWeek ? state.currentWeek : state.currentWeek + 1 ,
                 // current_week_start: '03 january',
                 // current_week_end: '07 january',
             };

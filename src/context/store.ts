@@ -7,7 +7,8 @@ import { StateInterface } from '../utils/interfaces'
 const middlwares = [thunk]
 
 export const initialState : StateInterface = {
-    currentWeek: 0,
+    currentWeek: 1,
+	lastWeek: 1,
     daysPlans: [],
 	rawData: [],
 }

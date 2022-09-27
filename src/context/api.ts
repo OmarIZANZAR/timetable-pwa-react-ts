@@ -4,30 +4,43 @@ import { StateInterface } from '../utils/interfaces';
 import { getDaysPlans, getWeeksStart } from '../utils/hooks';
 
 export const initiateState = (state: any) => async (dispatch: any) => {
-    let today = new Date()
-    let countingStartDay = new Date( getWeeksStart() );
-    let dt = today.getTime() - countingStartDay.getTime();
+  // Get sessions
+  let data = [];
+  try {
+    const res = await axios.get('http://localhost:5000/sessions?classroom=1')
+    data = res.data.data
+  } catch (error) {
+    console.log(error)
+  }
 
-    const initiatedState: StateInterface = {
-      ...state,
-      currentWeek: Math.floor( ( dt / ( 1000*3600*24 ) ) / 7 ) + 1,
-      daysPlans: [],
-    };
+  // Initiating the state
+  const initiatedState: StateInterface = {
+    ...state,
+    daysPlans: [],
+  };
 
-    initiatedState.today = today.toLocaleDateString(undefined, { weekday: 'long' })
+  // Setting the last week
+  const lastSession = data.sort( (a:any, b:any) => b.endWeek - a.endWeek )[0]
+  initiatedState.lastWeek = lastSession.endWeek
 
-    let data = [];
-    try {
-      const res = await axios.get('http://localhost:5000/sessions?classroom=1')
-      data = res.data.data
-    } catch (error) {
-      console.log(error)
-    }
+  // Setting the current day
+  let today = new Date()
+  initiatedState.today = today.toLocaleDateString(undefined, { weekday: 'long' })
 
-    initiatedState.rawData = data
-    initiatedState.daysPlans = getDaysPlans(initiatedState.currentWeek, data);
+  // Setting the current week count
+  let countingStartDay = new Date( getWeeksStart() );
+  let dt = today.getTime() - countingStartDay.getTime();
+  let cw = Math.floor( ( dt / ( 1000*3600*24 ) ) / 7 ) + 1
+  initiatedState.currentWeek = cw < initiatedState.lastWeek ? cw : initiatedState.lastWeek;
 
-    dispatch({ type: Actions.INITIATE_STATE, payload: initiatedState })
+  // Setting raw data
+  initiatedState.rawData = data
+
+  // Setting days plans for the current week
+  initiatedState.daysPlans = getDaysPlans(initiatedState.currentWeek, data);
+
+  // Dispatching
+  dispatch({ type: Actions.INITIATE_STATE, payload: initiatedState })
 }
 
 export const prevWeek = () => (dispatch: any) : void => {
@@ -45,8 +58,8 @@ export const setCurrentWeekEnds = (currentWeek: number) => (dispatch: any) : voi
   let firstMS = ( ( currentWeek - 1 ) * 7 * 24 * 3600 * 1000 ) + initMS
   let lastMS = firstMS + ( 4 * 24 * 3600 * 1000 )
 
-  let currentWeekStart = new Date(firstMS).toLocaleDateString('fr-Fr', options )
-  let currentWeekEnd = new Date(lastMS).toLocaleDateString('fr-Fr', options )
+  let currentWeekStart = new Date(firstMS).toLocaleDateString('fr-FR', options )
+  let currentWeekEnd = new Date(lastMS).toLocaleDateString('fr-FR', options )
 
   dispatch({ 
     type: Actions.SET_CURRENT_WEEK_ENDS,

@@ -45,6 +45,7 @@ export interface SessionInterface {
 
 export interface StateInterface {
     currentWeek: number,
+    lastWeek: number,
     daysPlans: SessionInterface[][],
     currentWeekStart?: string,
     currentWeekEnd?: string,
