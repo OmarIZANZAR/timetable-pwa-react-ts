@@ -25,6 +25,7 @@ export interface ElementInterface {
 
 export interface SessionInterface {
     uuid: string,
+    startDate: string,
     startWeek: number,
     endWeek: number,
     day: number,
@@ -33,20 +34,13 @@ export interface SessionInterface {
     isTp: boolean,
     Classroom: ClassroomInterface,
     Element: ElementInterface
-    // name: string,
-    // prof: string,
-    // starting_week: number,
-    // final_week: number,
-    // day: number,
-    // time_start: number,
-    // time_end: number,
-    // class_type: number
 }
 
 export interface StateInterface {
     currentWeek: number,
     lastWeek: number,
     daysPlans: SessionInterface[][],
+    startDate?: string,
     currentWeekStart?: string,
     currentWeekEnd?: string,
     today?: string,

@@ -24,14 +24,18 @@ export const initiateState = (state: any) => async (dispatch: any) => {
   initiatedState.lastWeek = lastSession.endWeek
 
   // Setting the current day
-  let today = new Date()
+  const today = new Date()
   initiatedState.today = today.toLocaleDateString(undefined, { weekday: 'long' })
 
+  // Getting the timtable start date
+  const weeksCountStartDate = getWeeksStart(data);
+  initiatedState.startDate = weeksCountStartDate
+
   // Setting the current week count
-  let countingStartDay = new Date( getWeeksStart() );
-  let dt = today.getTime() - countingStartDay.getTime();
-  let cw = Math.floor( ( dt / ( 1000*3600*24 ) ) / 7 ) + 1
-  initiatedState.currentWeek = cw < initiatedState.lastWeek ? cw : initiatedState.lastWeek;
+  const countingStartDay = new Date( weeksCountStartDate );
+  const dt = today.getTime() - countingStartDay.getTime();
+  const weekCount = Math.floor( ( dt / ( 1000*3600*24 ) ) / 7 ) + 1
+  initiatedState.currentWeek = weekCount < initiatedState.lastWeek ? weekCount : initiatedState.lastWeek;
 
   // Setting raw data
   initiatedState.rawData = data
@@ -51,10 +55,10 @@ export const nextWeek = () => (dispatch: any) : void => {
   dispatch({ type: Actions.NEXT_WEEK })
 }
 
-export const setCurrentWeekEnds = (currentWeek: number) => (dispatch: any) : void => {
+export const setCurrentWeekEnds = (currentWeek: number, startDate: string) => (dispatch: any) : void => {
   const options : any = { month: 'long', day: 'numeric'  }
 
-  let initMS = new Date( getWeeksStart() ).getTime()
+  let initMS = new Date( startDate ).getTime()
   let firstMS = ( ( currentWeek - 1 ) * 7 * 24 * 3600 * 1000 ) + initMS
   let lastMS = firstMS + ( 4 * 24 * 3600 * 1000 )
 

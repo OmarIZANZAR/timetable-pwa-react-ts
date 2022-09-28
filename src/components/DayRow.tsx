@@ -12,8 +12,6 @@ interface Props {
 }
 
 const DayRow = ({ daySessions, dayName, today } : Props) => {
-    console.log("DayRow", daySessions);
-
     return (
         <div className={styles.container}>
             <div className={styles.stroke}></div>

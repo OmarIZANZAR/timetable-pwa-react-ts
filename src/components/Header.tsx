@@ -9,7 +9,7 @@ const Header = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(API.setCurrentWeekEnds(state.currentWeek))
+        dispatch(API.setCurrentWeekEnds(state.currentWeek, state.startDate))
     }, [state.currentWeek])
  
     return (

@@ -1,4 +1,3 @@
-import datason from '../newData.json';
 import { SessionInterface } from "./interfaces";
 
 export function getDaysPlans ( currentWeek: number, data: any ) {
@@ -15,7 +14,10 @@ export function getDaysPlans ( currentWeek: number, data: any ) {
     return sessions;
 }
 
-export function getWeeksStart () : string {
-    console.log(datason.sessions.length)
-    return datason.weeks_starting_count;
+export function getWeeksStart (data: any) : string {
+    const sessions = data.sort( (a: any, b: any) => {
+        return new Date(a.startDate).valueOf() - new Date(b.startDate).valueOf()
+    })
+
+    return sessions[0].startDate;
 }
