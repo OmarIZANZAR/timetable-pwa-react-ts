@@ -2,7 +2,7 @@ import * as Actions from './actions'
 import { initialState } from './store';
 import { ActionInterface, StateInterface } from '../utils/interfaces'
 
-function reducer ( state: StateInterface = initialState, action: ActionInterface) : any {
+function reducer( state: StateInterface = initialState, action: ActionInterface) : StateInterface {
     switch(action.type){
         case Actions.INITIATE_STATE : return action.payload;
 
@@ -37,6 +37,7 @@ function reducer ( state: StateInterface = initialState, action: ActionInterface
 
         case Actions.SET_RAW_DATA: 
             return {
+                ...state,
                 rawData: action.payload,
             };
 

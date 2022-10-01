@@ -1,7 +1,7 @@
-import CSS from 'csstype';
+import React from 'react';
 import { Header, Table } from '../components';
 
-const Home = () => {
+const Home : React.FC = () : JSX.Element => {
     return (
         <div style={homeContainer}>
             <Header />
@@ -10,7 +10,7 @@ const Home = () => {
     )
 }
 
-const homeContainer : CSS.Properties = {
+const homeContainer : React.CSSProperties = {
     backgroundColor: 'inherit',
     height: '100%',
     width: '100%',

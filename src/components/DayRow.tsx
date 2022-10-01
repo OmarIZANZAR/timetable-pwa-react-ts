@@ -8,10 +8,10 @@ import ClassCard from './ClassCard'
 interface Props {
     daySessions: SessionInterface[],
     dayName: string,
-    today: string,
+    today: string | null,
 }
 
-const DayRow = ({ daySessions, dayName, today } : Props) => {
+const DayRow : React.FC<Props> = ({ daySessions, dayName, today } : Props) : JSX.Element => {
     return (
         <div className={styles.container}>
             <div className={styles.stroke}></div>
@@ -26,13 +26,6 @@ const DayRow = ({ daySessions, dayName, today } : Props) => {
             </div>
         </div>
     )
-}
-
-const container = {
-    height: '90px',
-    width: '100%',
-    borderBottom: '1px solid black',
-
 }
 
 export default DayRow

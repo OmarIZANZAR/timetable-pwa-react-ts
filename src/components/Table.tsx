@@ -5,17 +5,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import DayRow from './DayRow';
 import TableHead from './TableHead';
 
-import { SessionInterface } from '../utils/interfaces';
+import { SessionInterface, StateInterface } from '../utils/interfaces';
 import { getDaysPlans } from '../utils/hooks';
 import { Actions } from '../context';
 
-const Table = () => {
-    const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']
-    const state: any = useSelector(state => state)
+const Table : React.FC = () : JSX.Element => {
+    const days: string[] = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']
+    const state = useSelector((state: StateInterface) => state)
     const dispatch = useDispatch()
 
     useEffect(() => {
-        let daysPlans = getDaysPlans(state.currentWeek, state.rawData)
+        const daysPlans = getDaysPlans(state.currentWeek, state.rawData)
         dispatch({ type: Actions.SET_DAYS_PLANS, payload: daysPlans })
     }, [state.currentWeek])
 

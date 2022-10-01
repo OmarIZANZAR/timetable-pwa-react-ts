@@ -11,6 +11,10 @@ export const initialState : StateInterface = {
 	lastWeek: 1,
     daysPlans: [],
 	rawData: [],
+	startDate: null,
+    today: null,
+    currentWeekStart: null,
+    currentWeekEnd: null,
 }
 
 const store = createStore(

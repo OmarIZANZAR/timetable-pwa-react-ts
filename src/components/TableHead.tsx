@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/TableHead.module.css';
 
-const TableHead = () => {
+const TableHead : React.FC = () : JSX.Element => {
     return (
         <div className={styles.container}>
             <div className={styles.timer}>

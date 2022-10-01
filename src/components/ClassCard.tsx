@@ -7,7 +7,7 @@ interface Props {
     session: SessionInterface,
 }
 
-const ClassCard = ({ session } : Props) => {
+const ClassCard : React.FC<Props> = ({ session } : Props) : JSX.Element => {
 
     let start: number = 1;
     switch(session.startTime){
@@ -39,7 +39,7 @@ const ClassCard = ({ session } : Props) => {
                 <div className={styles.badge} style={{ 
                     backgroundColor: session.isTp ? "orange" : "#94B8FF"  
                 }}>
-                    <p>Pr.{session.Element.Teacher.firstname}</p>
+                    <p>Pr.{session.Element.Teacher?.firstname || ''}</p>
                 </div>
                 <div className={styles.time}>
                     <p>{ session.endTime - session.startTime }h</p>

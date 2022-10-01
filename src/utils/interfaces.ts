@@ -40,14 +40,16 @@ export interface StateInterface {
     currentWeek: number,
     lastWeek: number,
     daysPlans: SessionInterface[][],
-    startDate?: string,
-    currentWeekStart?: string,
-    currentWeekEnd?: string,
-    today?: string,
-    rawData?: SessionInterface[]
+    
+    rawData: SessionInterface[],
+
+    startDate: string | null,
+    today: string | null,
+    currentWeekStart: string | null,
+    currentWeekEnd: string | null,
 }
 
 export interface ActionInterface {
     type: string,
-    payload?: any 
+    payload?: any, 
 }

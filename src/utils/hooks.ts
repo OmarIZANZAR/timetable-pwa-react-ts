@@ -1,6 +1,6 @@
 import { SessionInterface } from "./interfaces";
 
-export function getDaysPlans ( currentWeek: number, data: any ) {
+export function getDaysPlans ( currentWeek: number, data: SessionInterface[] ) {
     let sessions: SessionInterface[][] = [[],[],[],[],[]];
 
     data.filter((session: any) => {
@@ -14,8 +14,8 @@ export function getDaysPlans ( currentWeek: number, data: any ) {
     return sessions;
 }
 
-export function getWeeksStart (data: any) : string {
-    const sessions = data.sort( (a: any, b: any) => {
+export function getWeeksStart (data: SessionInterface[]) : string {
+    const sessions: SessionInterface[] = data.sort( (a: any, b: any) => {
         return new Date(a.startDate).valueOf() - new Date(b.startDate).valueOf()
     })
 

@@ -1,15 +1,17 @@
 import styles from '../styles/Header.module.css';
+import React from 'react';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { API } from '../context';
+import { StateInterface } from '../utils/interfaces';
 
-const Header = () => {
-    const state: any = useSelector(state => state);
+const Header : React.FC = () : JSX.Element => {
+    const state = useSelector((state: StateInterface) => state);
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(API.setCurrentWeekEnds(state.currentWeek, state.startDate))
+        dispatch(API.setCurrentWeekEnds(state.currentWeek, state.startDate!))
     }, [state.currentWeek])
  
     return (
