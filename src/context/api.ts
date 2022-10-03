@@ -6,7 +6,7 @@ import { getDaysPlans, getWeeksStart } from '../utils/hooks';
 export const initiateState = (state: StateInterface) => async (dispatch: any) => {
   try {
     // Get sessions
-    const res = await axios.get('http://localhost:5000/sessions?classroom=1')
+    const res = await axios.get('https://timetable.cyclic.app/sessions?classroom=1')
     const data : SessionInterface[] = res.data.data
 
     // Initiating the state
