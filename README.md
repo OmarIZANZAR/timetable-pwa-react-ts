@@ -2,6 +2,6 @@
 A progressive web app that shows my timetable dynamicaly.
 
 ## Tech stack:
-*ReactJS, Typescript*
+*ReactJS, Typescript, Redux, Redux thunk, React Router*
 
-to view deployed version: https://ensemgi3-timetable-pwa.netlify.app
+to view deployed version: https://ensemtimetable.netlify.app
